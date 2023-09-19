@@ -9,24 +9,23 @@ const SideBar = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  width: 120px;
-  /* border: 4px solid #BF4F74; */
+  width: 90px;
   height: 65%;
   border-radius: 5px;
+  margin-left: 10px;
+  z-index: 1;
 `
 
 export default function LeftNavBar() {
   const dataLength = dataForSideBar.length - 1
   return (
-    <SideBar>
+    <SideBar className="text-[#323232]">
       {dataForSideBar.map((data, index) => (
         <>
           <Item
             key={`${index}-${data.label}`}
             d={data.d}
             label={data.label}
-            dataLength={dataLength}
-            numLength={index}
           />
           {index < dataLength ? <GradientLine key={`gradient-${dataLength}`} /> : null}
         </>
