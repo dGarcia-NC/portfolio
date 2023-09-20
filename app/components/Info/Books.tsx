@@ -28,18 +28,21 @@ export default function BooksIAmReading() {
           width={200}
           height={200}
           alt='Picture of the book'
+          style={ImageStyle}
         />
         <Image
           src={DDD}
           width={200}
           height={200}
           alt="Picture of the book"
+          style={ImageStyle}
         />
         <Image
           src={SD}
           width={200}
           height={200}
           alt="Picture of the book"
+          style={ImageStyle}
         />
         <Image
           src={APIA}
@@ -62,13 +65,15 @@ export default function BooksIAmReading() {
           alt="Picture of the book"
           style={ImageStyle}
         />
-        <Image
-          src={JSGP}
-          width={200}
-          height={200}
-          alt="Picture of the book"
-          style={ImageStyle}
-        />
+        <div className="pb-6">
+          <Image
+            src={JSGP}
+            width={200}
+            height={200}
+            alt="Picture of the book"
+            style={ImageStyle}
+          />
+        </div>
     </ SpaceEvenly>
   )
 }

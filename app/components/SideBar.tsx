@@ -21,14 +21,14 @@ export default function LeftNavBar() {
   return (
     <SideBar className="text-[#323232]">
       {dataForSideBar.map((data, index) => (
-        <>
+        <div key={`div-key-${index}`}>
           <Item
             key={`${index}-${data.label}`}
             d={data.d}
             label={data.label}
           />
           {index < dataLength ? <GradientLine key={`gradient-${dataLength}`} /> : null}
-        </>
+        </div>
       ))}
     </SideBar>
   )
